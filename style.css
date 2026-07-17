@@ -1,0 +1,340 @@
+/* RESET PADRÃO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #faf8f6; /* Um branco levemente aquecido, muito elegante */
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #333333;
+}
+
+/* BARRA DO TOPO (HEADER) */
+.topo-clinica {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: rgba(250, 248, 246, 0.95);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-clinica {
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: #c49a82; /* Tom de nude/dourado rosé fosco sofisticado */
+}
+
+.links-clinica a {
+    text-decoration: none;
+    color: #666666;
+    margin: 0 15px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.links-clinica a:hover {
+    color: #c49a82;
+}
+
+/* ÁREA DE BOAS-VINDAS (HERO) */
+.boas-vindas {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 8% 60px 8%;
+    gap: 40px;
+}
+
+.boas-vindas-texto {
+    max-width: 550px;
+}
+
+.boas-vindas-texto .tagline {
+    color: #c49a82;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.boas-vindas-texto h1 {
+    font-size: 2.8rem;
+    font-weight: 300; /* Letra fina clássica de marcas de cosméticos */
+    line-height: 1.3;
+    color: #222222;
+    margin-bottom: 20px;
+}
+
+.boas-vindas-texto p {
+    color: #666666;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+/* Botão elegante e arredondado */
+.btn-clinica {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #c49a82;
+    padding: 14px 30px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 50px; /* Bordas bem arredondadas transmitem suavidade */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(196, 154, 130, 0.2);
+}
+
+.btn-clinica:hover {
+    background-color: #b3856d;
+    transform: translateY(-2px);
+}
+
+/* Área da imagem da clínica */
+.boas-vindas-imagem {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.boas-vindas-imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 150px 150px 0 0; /* Arco no topo da imagem, tendência de luxo em design! */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsividade Básica para Celular */
+@media (max-width: 768px) {
+    .boas-vindas {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 140px;
+    }
+    .links-clinica { display: none; } /* Esconde o menu no celular temporariamente */
+    .boas-vindas-texto h1 { font-size: 2rem; }
+    .boas-vindas-imagem { max-width: 280px; }
+}
+
+/* 4. SEÇÃO DE TRATAMENTOS GOURMET/SPA */
+.secao-tratamentos {
+    width: 100%;
+    padding: 100px 8%;
+    background-color: #ffffff; /* Fundo branco puro para contrastar com o off-white do início */
+}
+
+.bloco-titulo {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+}
+
+.bloco-titulo h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #222222;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.bloco-titulo p {
+    color: #888888;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Organiza as 3 caixas em colunas elegantes */
+.grade-tratamentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* O card de estética limpo e clean */
+.card-tratamento {
+    background-color: #faf8f6; /* Caixa com o fundo off-white suave */
+    padding: 40px 30px;
+    border-radius: 20px;       /* Bordas bem arredondadas transmitem suavidade */
+    border: 1px solid rgba(196, 154, 130, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Efeito flutuar muito sutil e elegante */
+.card-tratamento:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(196, 154, 130, 0.1);
+    border-color: #c49a82;
+}
+
+.categoria-estetica {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #c49a82;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.card-tratamento h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #222222;
+    margin-bottom: 15px;
+}
+
+.card-tratamento p {
+    color: #666666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Link de agendamento fino e chique */
+.link-agendar {
+    display: inline-block;
+    text-decoration: none;
+    color: #c49a82;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #c49a82; /* Linha embaixo do texto em vez de botão quadrado */
+    padding-bottom: 4px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.link-agendar:hover {
+    color: #222222;
+    border-color: #222222;
+}
+
+/* 5. SEÇÃO SOBRE (INSTITUCIONAL CLEAN) */
+.secao-sobre {
+    width: 100%;
+    padding: 120px 8%;
+    background-color: #faf8f6; /* Volta para o off-white de luxo */
+    text-align: center;
+}
+
+.sobre-conteudo {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.sobre-conteudo h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #222222;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.sobre-conteudo p {
+    color: #666666;
+    font-size: 1rem;
+    line-height: 1.8;
+    font-style: italic; /* Dá um tom poético e sofisticado ao manifesto */
+}
+
+/* 6. RODAPÉ DA CLÍNICA */
+.rodape-clinica {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 60px 8% 20px 8%;
+    border-top: 1px solid rgba(196, 154, 130, 0.15);
+}
+
+.conteudo-rodape-clinica {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(196, 154, 130, 0.1);
+}
+
+.coluna-clinica {
+    flex: 1;
+    min-width: 200px;
+}
+
+.coluna-clinica h3 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #c49a82;
+    margin-bottom: 15px;
+}
+
+.coluna-clinica h4 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #222222;
+    margin-bottom: 15px;
+}
+
+.coluna-clinica p {
+    color: #777777;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+
+.redes-clinica {
+    margin-top: 15px;
+}
+
+.redes-clinica a {
+    text-decoration: none;
+    color: #c49a82;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.redes-clinica a:hover {
+    color: #222222;
+}
+
+/* COPYRIGHT FINAL */
+.copyright-clinica {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.copyright-clinica p {
+    color: #999999;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+/* ATUALIZAÇÃO DA ROLAGEM SUAVE PARA O SITE INTEIRO */
+html {
+    scroll-behavior: smooth;
+}
